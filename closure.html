@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<h lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* definisi
+        closure merupakan kombinasi antara function dan lingkungan leksikal di dalam function tersebut
+        */
+        
+        function init(){
+            let nama = "Wawan";  //lokal varible
+            function tampilNama(){  //inner function
+                console.log(nama);   //akses ke parent variable
+            }
+            tampilNama()
+        }
+        init()
+
+        function ucapSalam(waktu){
+            function nama(nama){
+                console.log(`hai ${nama}, selamat ${waktu}`);
+            }
+            return nama
+            
+            
+        }
+
+        let salam = ucapSalam('pagi')
+        salam("wawan")
+
+        function ucapSalam(waktu){
+            return  function(nama){
+                console.log(`hai ${nama}, selamat ${waktu}`);
+            }
+            
+            
+        }
+
+        ucapSalam('pagi')('wawan');
+
+
+        
+    </script>
+</body>
+</h

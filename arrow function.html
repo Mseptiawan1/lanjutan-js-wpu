@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* arrow function 
+        betuk lain yang lebih ringkas dari function declaration    */
+
+        let tampilPesan = (nama) => {
+            console.log(`halo ${nama}`)
+
+        }
+        tampilPesan('wawan')
+        
+        let peringatan =  lokasi => `jangan buang sampah di lokasi ${lokasi}`;
+        console.log(peringatan('komp yuka'));
+
+        let sapa = () => 'hello';
+        console.log(sapa());
+
+        let siswa = ['wawan','adi'];
+        let iterasi = siswa.map(nama => ({nama: nama, jumlahHuruf: nama.length}));  //agar kurung kurawal dianggap object bukan return
+        console.table(iterasi)
+    </script>
+
+</body>
+</html>

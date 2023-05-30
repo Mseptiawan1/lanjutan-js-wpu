@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* beberapa cara membuat object pada javascript
+        ^ object literal
+        ^ function declaration
+        ^ constructor function (keyword new)
+        ^ object.create()
+        */
+
+        //object literal
+        let data = {
+            nama: "Wawan",
+            tahun: 2023,
+            "tahun lahir" : function(usia){
+                this.tahun = this.tahun - usia
+            }
+        }
+
+        // jika kita ingin membuat menduplikat object maka nama object tak boleh sama, maka dr itu gunakan function declaration
+        /*   
+        function mahasiswa(nama,tahun){
+            let mahasiswa = {};   //deklarasi buat object
+            mahasiswa.nama = nama;  //membuat properti dr object
+            mahasiswa.tahun = tahun;
+            mahasiswa.tahunLahir = function(usia){
+                this.tahun -= usia;     //menambahkan function
+
+            }
+          return mahasiswa;    //mengembalikan nilai mahasiswa
+        }
+        let wawan = mahasiswa('wawan',2023);   //memanggil function declaration
+        let adi = mahasiswa('adi',2023);      //membuat mahasiswa baru
+        */
+       
+        //costructor function
+        //function declaration paling sering digunakan
+        //mirip dengan function declaration,tidak perlu menulis return, declarasi variable karna udah dibuat oleh js  
+        function mahasiswa(nama,tahun){
+            this.nama = nama;  
+            this.tahun = tahun;
+            this.tahunLahir = function(usia){
+                this.tahun -= usia;     //menambahkan function
+
+            }
+        }
+        let wawan = new mahasiswa('wawan',2023);   //memanggil function declaration
+        let adi = new mahasiswa('adi',2023);      //membuat mahasiswa baru
+
+    </script>
+</body>
+</html>

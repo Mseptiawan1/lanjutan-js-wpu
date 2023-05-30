@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const methodMahasiswa={
+        "tahun Lahir": function(usia){
+                this.tahun -= usia;     
+
+            }
+        };
+        function mahasiswa(nama,tahun){
+            let mahasiswa = Object.create(methodMahasiswa);   //deklarasi buat object
+            mahasiswa.nama = nama;  //membuat properti dr object
+            mahasiswa.tahun = tahun;
+            // mahasiswa.tahunLahir = methodMahasiswa["tahun Lahir"];
+           
+          return mahasiswa;    //mengembalikan nilai mahasiswa
+        }
+        let wawan = mahasiswa('wawan',2023);   //memanggil function declaration
+        let adi = mahasiswa('adi',2023);      //membuat mahasiswa baru
+        
+
+
+        /*
+        
+        function Mahasiswa(nama,tahun){
+            this.nama = nama;
+            this.tahun = tahun;
+            Mahasiswa.prototype.TahunLahir = function(usia){
+                this.tahun -= usia
+            }
+        }
+        const wawan = new Mahasiswa("Wawan",2023);
+
+        */
+    </script>
+</body>
+</html>
