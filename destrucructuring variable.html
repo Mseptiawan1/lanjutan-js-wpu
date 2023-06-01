@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <body>
+    expression pada javascript yang membuat kita dapat membongkar nilai dari array atau properti dari object kedalamm variable yang terpisah -->
+    <script>
+
+    //     //penggunaan sederhana
+    //     const list = ['mizan','wawan','adi']
+
+    //     const [a, b,c] = list
+    //   // const [a, ,c] = list   //skip variable tertenu
+  
+    //     console.log(a)
+    //     console.log(b)
+    //     console.log(c)
+        
+    //     const kendaraan = {
+    //         motor: 'honda',
+    //         mobil: 'toyota',
+    //         pesawat: 'air'
+    //     }
+    //     const{motor,mobil,pesawat} = kendaraan;
+
+        
+    //     console.log(motor)
+    //     console.log(mobil)
+    //     console.log(pesawat)
+
+
+
+
+
+    //     //destructuring array secara biasa
+    //     const list2 = ['yuan','erik']
+    //     let nama = list2[0];
+    //     let nama2 = list2[1];
+
+    //     console.log(nama)
+    //     console.log(nama2)
+
+
+        //swap items
+        // let a = 1;
+        // let b = 2;
+        // console.log(a)
+        // console.log(b)
+
+
+        // [a,b] = [b,a]
+
+        // console.log(b)
+        // console.log(a)
+
+        //return value pada function
+
+        // function coba(){
+        //     return [1,2];
+
+        // }
+        // const [a,b] = coba()
+        // console.log(a)
+        // console.log(b)
+
+
+        // //rest parameter
+        // const [a,...rest] = [1,2,3,4]
+        // console.log(a)
+        // console.log(rest)
+
+        // //dectructuring object
+        // const mhs = {
+        //     nama:'wawan',
+        //     umur:20
+
+        // }
+        // const {nama,umur} = mhs;   //nama umur harus sesuai dengan properti pada object
+
+        // console.log(nama)
+        // console.log(umur)
+
+        // ({nama,umur} = { nama:'wawan', umur:20 });
+        // console.log(nama)
+        // console.log(umur)
+
+        //assign ke variable baru
+        // const mhs = {
+        //     nama:'adi',
+        //     usia: 20
+        // }
+        // const {nama:a,usia:u} = mhs;
+        // console.log(a)
+        // console.log(u)
+
+        //memberikan default value 
+        // const mhs = {
+        //     nama:'adi',
+        //     usia: 20
+        // }
+        // const {nama,usia,email = 'mseptiawan017@gamil.com'} = mhs;
+        // console.log(nama)
+        // console.log(email)
+
+
+        //memberikan value dan asign ke variable baru
+        // const mhs = {
+        //     nama:'adi',
+        //     usia: 20
+        // }
+        // const {nama:n,usia:u,email:e = 'mseptiawan017@gamil.com'} = mhs;
+        // console.log(n)
+        // console.log(e)
+
+        // const mhs = {
+        //     nama:'adi',
+        //     usia: 20,
+        //     namaLengkap: "maulana"
+        // }
+        // const {nama:n, ...value} = mhs;
+        // console.log(n)
+        // console.log(value)
+
+        //mengambil field pada object dan object kita kirim sbg parameter untuk function
+
+        // const mhs = {
+        //     nama:'wawan',
+        //     usia:20,
+        //     namaLengkao:'septiawan'
+
+
+        // }
+        // function getNama({nama}){
+        //     return nama
+
+        // }
+        // console.log(getNama(mhs));
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
