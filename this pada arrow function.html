@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*  
+    pada contructor function , bisa menerapkan this
+     
+    */
+   /*   constructor function
+
+
+        const Kendaraan =  function motor(merk){
+            this.merk = merk;
+            this.roda = function(){
+                console.log(`kendaraan ${this.merk}`);
+
+            }
+        }   
+
+        const kendaraan = new Kendaraan('yamaha');
+        console.log(kendaraan.roda());  
+        
+        */
+
+        /* pada arrow function tidak bisa ada contructor function
+        */
+        const Kendaraan = (merk) => {    //tak bisa dijadikan constructor
+            this.merk = merk;
+            this.roda = function(){
+                console.log(`kendaraan ${this.merk}`);
+
+            this.tes = () => {
+                console.log('tes');  //method bisa dijadikan arrow function
+    
+            }
+            }
+        }   
+        
+        //object literal
+        const sayHello = {
+            nama:'wawan',
+            usia:20,
+            katakanHello: function(){
+                console.log(`halo ${this.nama}, usiamu ${this.usia}`);
+            },
+            bilangHei: () =>{
+                console.log(`halo ${this.nama}, usiamu ${this.usia}`);  
+
+            }
+            //arrow bilangHei tidak memiliki konsep this
+            
+            
+        }
+
+        const setUmur = function set(){
+            this.umur = 20;
+
+            setInterval(()=>{
+                console.log(this.umur++);
+            //jadi arrow function akan mengakses this pada leksikal nya yaitu setUmur, dia keluar 
+            },500) 
+            setInterval(function(){
+                console.log(this.umur++);
+            },500)   //pada anonymous function this mengacu pada window
+
+        }
+       const hitung = new setUmur();
+
+    
+      
+
+    </script>
+</body>
+</html

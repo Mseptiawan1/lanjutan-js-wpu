@@ -14,6 +14,8 @@
 
             }
         };
+
+        //fucntion expresion
         function mahasiswa(nama,tahun){
             let mahasiswa = Object.create(methodMahasiswa);   //deklarasi buat object
             mahasiswa.nama = nama;  //membuat properti dr object
@@ -27,16 +29,16 @@
         
 
 
-        /*
+        /* function contructor
         
-        function Mahasiswa(nama,tahun){
+        const mizan = function Mahasiswa(nama,tahun){
             this.nama = nama;
             this.tahun = tahun;
             Mahasiswa.prototype.TahunLahir = function(usia){
                 this.tahun -= usia
             }
         }
-        const wawan = new Mahasiswa("Wawan",2023);
+        const wawan = new mizan("Wawan",2023);
 
         */
     </script>

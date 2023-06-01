@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function yang beroperasi pada function yang lain, baik itu digunakan dalam argument, maupun sebagai return value
+        // js memperlakukan function sbg object
+        function belajar(mataKul,selesai){
+            console.log(`selesai mengerjakan tugas ${mataKul}`);
+            selesai()
+        }
+        function selesai(){
+            // alert('nice job');
+
+        }
+
+        belajar("pemrograman website",selesai)
+        //  function belajar sebagai higher order function ( yang memiliki argument callback) dan selesai merupakan callback(function sebagai argument)
+
+        setTimeout(() => {
+            console.log('halo')
+        }, 1000);
+        //kode diatas merupakan high order function juga
+    
+        function ucapkanSalam(waktu){  //higher order function
+            return function(nama){  //callback
+                console.log(`${waktu},${nama}`);
+            }
+        }
+        let salam = ucapkanSalam('pagi')
+        salam('wawan')
+
+        ucapkanSalam('pagi')('wawan')
+
+        /* alasan menggunakan higher order function 
+        1. abstraksi membuat kode itu sederhana,simple
+        semakin besar sebuah program semakin tinggi kompleksitasnyas, semakin membingungkan programmer.
+        */
+
+        for(i=1;i<10;i++){
+            console.log(i)
+        }
+        function repeatLog(n){
+            for (i=1;i<n;i++){
+                console.log(i)
+            }
+        }
+        repeatLog(10);
+
+        function hitung(n,action){
+            for(i=1;i<n;i++){
+                action(i)
+            }
+        }
+        hitung(10,console.log);
+        hitung(10,alert);
+        
+
+        // contoh higher order function
+        // array.prototype.map()
+        //array.prototype.filter()
+        //array.prototype.reduce()
+
+
+    </script>
+</body>
+</html>

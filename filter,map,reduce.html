@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const angka = [1,4,6,2,8,-1,-6]
+        const newAngka = []
+        for(i=0;i<angka.length;i++){
+            if(angka[i]>=3){  //angka dengan index ke i
+                newAngka.push(angka[i]);
+            }
+        }
+        console.log(newAngka)
+
+
+        let newAngka1 = angka.filter( a => a >=3);
+        console.log(newAngka1)
+
+        const newAngkaBaru = angka.filter(function (a){
+            return a>=3
+        })
+        console.log(newAngkaBaru)
+
+        
+        let kitaMap = angka.map(function(param){
+            return param * 2;
+        })
+        console.log(angka) //tidak merubah angka tersebut
+        console.log(kitaMap)
+
+        let reduce = angka.reduce((accumulator, currentValue)=> accumulator+currentValue,0)
+        console.log(reduce)
+        //accumulator hasil dari prosesnya misal dijumlahkan
+        // sedangkan cuurentValue nya bergeser, dan accumulator berubah
+
+        //method chainig
+        //cari angka >5
+        //kalikan 3
+        //jumlahkan
+
+        let hasil = angka.filter(a => a>5)  //6,8
+        .map(a => a*3) //18,24
+        .reduce((acc,cur) => acc+cur);  //42
+        console.log(hasil)
+        
+
+    </script>
+</body>
+</html>
