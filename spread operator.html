@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread operator dan rest parameter</title>
+    <style>
+        
+        .wawan{
+            color: red;
+            font-size: 200px;
+            padding-left: 20%;   
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .wawan span{
+            transition: 1s;
+            display: inline-block;
+
+
+        }
+        .wawan span:hover{
+            transform: scale(2);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>wawan</li>
+        <li>kepin</li>
+        <li>amat</li>
+
+    </ul>
+
+    <h1 class="wawan">septiawan</h1>
+    <script>
+        //spread opeator
+        //memecah iterable menjadi single element
+        // const mhs = ['wawan','asep']
+
+        
+        // console.log(...mhs) //menjadi wawan asep (memecah array)
+        // console.log(...mhs[0]) //w a w a n
+        // const mhs2 = ['adi','kelpin']
+        // const orang = [...mhs,'adi', ...mhs2]  //gabungkan dari 2 array
+        // const orang2 = mhs.concat(mhs2) // menggabungkan 2 array, tetapi lebih felxbile menggunakan spread
+        
+        // console.log(orang)
+
+        //mengcopy array
+        // const mhs = ['wawan','asep']
+        // const mhs2 = mhs;// tetapi tidak benar benar mengcopy
+        // mhs2[0] = "kntl"
+
+        // const mhs3 = [...mhs]
+        // mhs3[0] = 'kntl'  //tidak mengubah array mhs
+        // console.log(mhs3)
+
+        // const ambil = document.querySelectorAll('li')
+        // const listku = []
+        // for(i=0;i<ambil.length;i++){
+        //     listku.push(ambil[i].textContent)
+            
+
+        // }
+        // console.log(listku)
+
+        // const mhs = [...ambil].map(a=> a.textContent)
+        // console.log(mhs)
+
+
+        const nama = document.querySelector('.wawan');
+        const huruf = [...nama.textContent].map(a=>`<span>${a}</span>`).join('')
+        nama.innerHTML=huruf;
+
+        //join() berguna untuk menjadi kan array menjadi string 
+        
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //destructuring
+        // function penjumlahanPerkalian(a,b){
+        //     return [a+b,a*b]
+        // }
+        // const [jumlah,kali] = penjumlahanPerkalian(3,4);
+        // console.log(jumlah)
+        // console.log(kali)
+
+
+        // function kalkulasi(a,b){
+        //     return [a+b,a-b,a*b,a/b]
+        // }
+        // const [bagi,pengurangan,kali,jumlah] = kalkulasi(3,4);
+        // console.log(bagi)  //urutan berpengaruh pada dectruturing
+        //solusinya jadikan return value menjadi object
+        
+        // function kalkulasi(a,b){
+        //     return {
+        //         jumlah: a+b,
+        //         kali:a*b
+        //     }
+        // }
+        
+        // const {kali,jumlah} = kalkulasi(2,4);
+        // console.log(kali)
+        // console.log(jumlah);
+        //menjadi tidak urutan
+
+        //destructuring function arguments
+
+        const mhs = {
+            nama:'wawan',
+            usia:20,
+            nilai:{
+                uts:100,
+                uas:80
+            }
+            
+        }
+        function ambil({nama,usia,nilai:{uts,uas}}){
+            return `nama ${nama}, usia ${usia}, nilai anda ${uts}`;
+
+        }
+        console.log(ambil(mhs))
+
+    
+
+
+
+    </script>
+</body>
+</html>

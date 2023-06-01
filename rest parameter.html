@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // rest parameter
+        // merepresentasikan argument pada function dengan jumlah yang tidak terbatas menjadi sebuah Array
+        // function myFunc(a,b,...myArgs){ //hanya bisa digunakan di akhir parameter
+        //     // return myArgs
+        //     //sama seperti arguments yang menampung nilai argument, tapi tidak berbentuk array, tapi bisa diubah dengan 
+        //     return Array.from(arguments)
+
+        //     //atau masukkan di spread parameter
+        //     // return [...arguments]
+
+        // }
+        // console.log(myFunc(1,2,3,4))
+
+        
+        // function jumlahkan(...angka){
+        //     // let total = 0
+        //     // for(const a of angka){
+        //     //     total+=a
+        //     // }
+        //     // return total
+        //     return angka.reduce((a,b)=>a+b)
+        // }
+        
+        // console.log(jumlahkan(1,2,3,4,5))
+
+        //array destructuring
+
+        // const kelompok = ['wawan','mizan','erik']
+
+        // const [ketua,...nakknt] = kelompok;
+        // console.log(ketua)
+
+        // for(const [i,l] of nakknt.entries()){
+        // console.log(`ketua ${ketua}, anggota : nama ${l}, urutan ${i}`);
+
+        // }
+
+        // //object destructuring
+        // const team = {
+        //     ui : 'adi',
+        //     frontend:'wawan',
+        //     backend:'wawan septiawan"'
+        // }
+
+        // const {ui,...etc} = team;
+        // console.log(ui)
+        // console.log(etc)
+
+        function filterBy(type, ...seleksi){
+            return seleksi.filter(a => typeof a === type)
+        }
+        console.log(filterBy('boolean',1,4,true,false,"woi",5));
+
+
+    </script>
+</body>
+</html>
